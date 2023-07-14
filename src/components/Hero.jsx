@@ -1,6 +1,6 @@
 import { content } from "../Content";
 const Hero = () => {
-  const { hero } = content;
+const { hero } = content;
 
   return (
     <section id="home" className="overflow-hidden">

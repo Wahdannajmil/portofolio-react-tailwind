@@ -37,10 +37,6 @@ export const content = {
       icon: BiUser,
     },
     {
-      link: "#services",
-      icon: RiServiceLine,
-    },
-    {
       link: "#projects",
       icon: RiProjectorLine,
     },
@@ -49,6 +45,7 @@ export const content = {
       icon: MdOutlinePermContactCalendar,
     },
   ],
+  
   hero: {
     title: "Frontend Web Developer",
     firstName: "Wahdan Najmil",
@@ -71,59 +68,37 @@ export const content = {
     skills_content: [
       {
         name: "Figma",
-        para: "Lorem ipsum text  dummy",
         logo: figma,  
       },
       {
         name: "html",
-        para: "Lorem ipsum text  dummy",
         logo: html,
       },
       {
         name: "CSS",
-        para: "Lorem ipsum text  dummy",
         logo: css,
       },
       {
         name: "js",
-        para: "Lorem ipsum text  dummy",
         logo: js,
       },
       {
         name: "Bootstrap",
-        para: "Lorem ipsum text  dummy",
         logo: Bootstrap,
       },
       {
         name: "Tailwind",
-        para: "Lorem ipsum text  dummy",
         logo: Tailwind,
       },
       {
         name: "React js",
-        para: "Lorem ipsum text  dummy",
         logo: reactjs,
       },
 
     ],
     icon: MdArrowForward,
   },
-  services: {
-    title: "Services",
-    subtitle: "WHAT I OFFER",
-    service_content: [
-      {
-        title: "Web Development",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo1,
-      },
-      {
-        title: "ui / ux DESIGNING",
-        para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-        logo: services_logo2,
-      },
-    ],
-  },
+  
   Projects: {
     title: "Projects",
     subtitle: "MY CREATION",
@@ -142,62 +117,24 @@ export const content = {
       },
     ],
   },
-  Testimonials: {
-    title: "Testimonials",
-    subtitle: "MY CLIENT REVIEWS",
-    testimonials_content: [
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar1,
-        name: "JOHN DOE",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar2,
-        name: "Tom Alex",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar3,
-        name: "Johnny",
-      },
-      {
-        review:
-          "“In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstra”",
-        img: avatar4,
-        name: "ROBBIN",
-      },
-    ],
-  },
-  Hireme: {
-    title: "Hire Me",
-    subtitle: "FOR YOUR PROJECTS",
-    image1: Hireme_person,
-    image2: Hireme_person2,
-    para: "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document elying on mean",
-    btnText: "Hire Me",
-  },
   Contact: {
-    title: "Contect Me",
+    title: "Contact Me",
     subtitle: "GET IN TOUCH",
     social_media: [
       {
-        text: "codingwithenjoy@gmail.com",
+        text: "najmilwahdan@gmail.com",
         icon: GrMail,
-        link: "mailto:codingwithenjoy@gmail.com",
+        link: "mailto:najmilwahdan@gmail.com",
       },
       {
-        text: "+98 930 311 5211",
+        text: "+62 823 3184 4648",
         icon: MdCall,
-        link: "https://wa.me/9917877456",
+        link: "https://wa.me/6282331844648",
       },
       {
         text: "codingwithenjoy",
         icon: BsInstagram,
-        link: "https://www.instagram.com/codingwithenjoy/",
+        link: "https://www.instagram.com/najmilwahdan_/",
       },
     ],
   },
