@@ -2,6 +2,11 @@ import { content } from "../Content";
 const Hero = () => {
 const { hero } = content;
 
+  
+    const handleClick = () => {
+    window.open("https://www.linkedin.com/in/wahdan-najmil-fata-949aa825a/", "_blank");
+  };
+
   return (
     <section id="home" className="overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
@@ -20,7 +25,9 @@ const { hero } = content;
           <h2>{hero.title}</h2>
           <br />
           <div className="flex justify-end">
-            <button className="btn">{hero.btnText}</button>
+            <button className="btn" onClick={handleClick}>
+          {hero.btnText}
+        </button>
           </div>
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (

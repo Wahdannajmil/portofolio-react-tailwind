@@ -24,7 +24,7 @@ const App = () => {
       <Contact />
       <footer className="p-3 text-center">
         <h6 className="mb-3">Wahdan Najmil Fata</h6>
-        <p>Coding With Enjoy</p>
+        <p>Frontend Web Developer</p>
       </footer>
     </div>
   );

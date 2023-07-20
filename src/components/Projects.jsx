@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { content } from "../Content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,6 +7,12 @@ import { Pagination } from "swiper";
 
 const Projects = () => {
   const { Projects } = content;
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleReadMore = (link) => {
+    window.open(link, "_blank"); // Membuka tautan di tab baru
+  };
+
   return (
     <section className="bg-bg_light_primary" id="projects">
       <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
@@ -18,13 +25,7 @@ const Projects = () => {
           </h4>
           <br />
         </div>
-        <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
-          <img
-            src={Projects.image}
-            alt="..."
-            data-aos="fade-right"
-            className="max-w-[45vw] min-w-[22rem]"
-          />
+        <div className="flex items-center lg:flex-row flex-col-reverse">
           <Swiper
             pagination={{
               clickable: true,
@@ -32,7 +33,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-xs drop-shadow-primary self-start"
+            className="rounded-3xl pb-16 max-w-lg drop-shadow-primary self-start"
           >
             {Projects.project_content.map((content, i) => (
               <SwiperSlide
@@ -42,7 +43,10 @@ const Projects = () => {
                 <img src={content.image} alt="..." />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
-                  <button className="font-bold text-gray self-end">
+                  <button
+                    className="font-bold text-gray self-end"
+                    onClick={() => handleReadMore(content.link)}
+                  >
                     READ MORE
                   </button>
                 </div>
@@ -50,6 +54,18 @@ const Projects = () => {
             ))}
           </Swiper>
         </div>
+
+        {selectedProject && (
+          <div className="selected-project">
+            <button
+              className="close-button"
+              onClick={() => setSelectedProject(null)}
+            >
+              Close
+            </button>
+            <iframe src={selectedProject} title="Selected Project" />
+          </div>
+        )}
       </div>
     </section>
   );

@@ -6,24 +6,19 @@ import reactjs from "./assets/images/Skills/react.png";
 import css from "./assets/images/Skills/css.png";
 import js from "./assets/images/Skills/js.png";
 import Tailwind from "./assets/images/Skills/tailwind.png";
-import services_logo1 from "./assets/images/Services/logo1.png";
-import services_logo2 from "./assets/images/Services/logo2.png";
-import services_logo3 from "./assets/images/Services/logo3.png";
-import project1 from "./assets/images/projects/img1.png";
-import project2 from "./assets/images/projects/img2.png";
-import project3 from "./assets/images/projects/img3.png";
-import avatar1 from "./assets/images/Testimonials/avatar1.png";
-import avatar2 from "./assets/images/Testimonials/avatar2.png";
-import avatar3 from "./assets/images/Testimonials/avatar3.png";
-import avatar4 from "./assets/images/Testimonials/avatar4.png";
-import Hireme_person from "./assets/images/Hireme/person.png";
-import Hireme_person2 from "./assets/images/Hireme/person2.png";
+import project1 from "./assets/images/projects/project1.png";
+import project2 from "./assets/images/projects/project2.png";
+import project3 from "./assets/images/projects/project3.png";
+import project4 from "./assets/images/projects/project4.png";
+import project5 from "./assets/images/projects/project5.png";
+import project6 from "./assets/images/projects/project6.png";
+import project7 from "./assets/images/projects/project7.png";
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
 import { TbSmartHome } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
-import { RiServiceLine, RiProjectorLine } from "react-icons/ri";
+import { RiProjectorLine } from "react-icons/ri";
 import { MdOutlinePermContactCalendar } from "react-icons/md";
 
 export const content = {
@@ -104,16 +99,34 @@ export const content = {
     subtitle: "MY CREATION",
     project_content: [
       {
-        title: "Gym Website",
+        title: "Stunting Information Center",
         image: project1,
+        link : "https://stunting-center.netlify.app/",
       },
       {
-        title: "Social Media web",
+        title: "Todo list App",
         image: project2,
+        link : "https://todolist-wahdan-skilvul.netlify.app/"
       },
       {
-        title: "Creative Website",
+        title: "My Portofolio Website",
         image: project3,
+        link : "https://github.com/Wahdannajmil/portofolio-react-tailwind"
+      },
+      {
+        title: "BMI kalkulator",
+        image: project4,
+        link : "https://bmikalkulator-wahdan.netlify.app/"
+      },
+      {
+        title: "Jogja Food Hunter",
+        image: project5,
+        link : "https://github.com/Wahdannajmil/Jogja-food-hunter"
+      },
+      {
+        title: "Stunting center with HTML CSS JS",
+        image: project7,
+        link : "https://stuntingcenter.netlify.app/index.html"
       },
     ],
   },
@@ -132,7 +145,7 @@ export const content = {
         link: "https://wa.me/6282331844648",
       },
       {
-        text: "codingwithenjoy",
+        text: "najmilwahdan_",
         icon: BsInstagram,
         link: "https://www.instagram.com/najmilwahdan_/",
       },
