@@ -7,12 +7,12 @@ import css from "./assets/images/Skills/css.png";
 import js from "./assets/images/Skills/js.png";
 import Tailwind from "./assets/images/Skills/tailwind.png";
 import gitbash from "./assets/images/Skills/gitbash.png"
-import project1 from "./assets/images/projects/project1.png";
-import project2 from "./assets/images/projects/project2.png";
-import project3 from "./assets/images/projects/project3.png";
-import project4 from "./assets/images/projects/project4.png";
-import project5 from "./assets/images/projects/project5.png";
-import project7 from "./assets/images/projects/project7.png";
+import project1 from "./assets/images/Projects/project1.png";
+import project2 from "./assets/images/Projects/project2.png";
+import project3 from "./assets/images/Projects/project3.png";
+import project4 from "./assets/images/Projects/project4.png";
+import project5 from "./assets/images/Projects/project5.png";
+import project7 from "./assets/images/Projects/project7.png";
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
