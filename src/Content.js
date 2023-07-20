@@ -6,12 +6,12 @@ import reactjs from "./assets/images/Skills/react.png";
 import css from "./assets/images/Skills/css.png";
 import js from "./assets/images/Skills/js.png";
 import Tailwind from "./assets/images/Skills/tailwind.png";
+import gitbash from "./assets/images/Skills/gitbash.png"
 import project1 from "./assets/images/projects/project1.png";
 import project2 from "./assets/images/projects/project2.png";
 import project3 from "./assets/images/projects/project3.png";
 import project4 from "./assets/images/projects/project4.png";
 import project5 from "./assets/images/projects/project5.png";
-import project6 from "./assets/images/projects/project6.png";
 import project7 from "./assets/images/projects/project7.png";
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
@@ -89,7 +89,10 @@ export const content = {
         name: "React js",
         logo: reactjs,
       },
-
+      {
+        name: "GIT / GITBASH",
+        logo: gitbash,
+      },
     ],
     icon: MdArrowForward,
   },
@@ -101,32 +104,38 @@ export const content = {
       {
         title: "Stunting Information Center",
         image: project1,
-        link : "https://stunting-center.netlify.app/",
+        link: "https://stunting-center.netlify.app/",
+        description: "Website ini merupakan project akhir dari program MSIB di SKILVUL, project ini dibuat dengan React js, menggunakan React context sebagai state management, dan memanfaatkan data dari API "
       },
       {
         title: "Todo list App",
         image: project2,
-        link : "https://todolist-wahdan-skilvul.netlify.app/"
+        link: "https://todolist-wahdan-skilvul.netlify.app/",
+        description : "Ini merupakan sebuah fitur todolist yaitu dibuat dengan menggunakan React js"
       },
       {
         title: "My Portofolio Website",
         image: project3,
-        link : "https://github.com/Wahdannajmil/portofolio-react-tailwind"
+        link: "https://github.com/Wahdannajmil/portofolio-react-tailwind",
+        description : "Website ini merupakan personal webstite yang saya buat berisi koleksi proyek, hasil karya, atau pengalaman kerja yang dimiliki"
       },
       {
         title: "BMI kalkulator",
         image: project4,
-        link : "https://bmikalkulator-wahdan.netlify.app/"
+        link: "https://bmikalkulator-wahdan.netlify.app/",
+        description : "Fitur yang saya buat untuk memenuhi tugas dari Program MSIB dari skilvul"
       },
       {
         title: "Jogja Food Hunter",
         image: project5,
-        link : "https://github.com/Wahdannajmil/Jogja-food-hunter"
+        link: "https://github.com/Wahdannajmil/Jogja-food-hunter",
+        description : "Website ini saya buat secara berkelompok yaitu untuk memenuhi tugas mata kuliah RPLL(Rekayasa perangkat lunak lanjut), di buat menggunakan php native"
       },
       {
         title: "Stunting center with HTML CSS JS",
         image: project7,
-        link : "https://stuntingcenter.netlify.app/index.html"
+        link: "https://stuntingcenter.netlify.app/index.html",
+        description : "Project ini merupakan tugas dari program MSIB di skilvul, website ini dibuat dengan HTML,CSS,JS"
       },
     ],
   },

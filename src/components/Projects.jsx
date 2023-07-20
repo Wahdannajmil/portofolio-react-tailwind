@@ -4,13 +4,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
+import Swal from "sweetalert2";
 
 const Projects = () => {
   const { Projects } = content;
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const handleReadMore = (link) => {
-    window.open(link, "_blank"); // Membuka tautan di tab baru
+  const handleReadMore = (content) => {
+    if (content.title === "Jogja Food Hunter") {
+      // Jika proyek adalah "Jogja Food Hunter", tampilkan SweetAlert pengembangan
+      Swal.fire({
+        title: "Mohon maaf",
+        text: "Project ini masih dijalankan di localhost, belum dilakukan deployment",
+        icon: "info",
+        confirmButtonText: "Lihat kode di github",
+      }).then(() => {
+        // Setelah pengguna menekan tombol "OK" di SweetAlert, buka link GitHub
+        window.open("https://github.com/Wahdannajmil/Jogja-food-hunter", "_blank");
+      });
+    } else {
+      window.open(content.link, "_blank");
+    }
   };
 
   return (
@@ -25,6 +39,19 @@ const Projects = () => {
           </h4>
           <br />
         </div>
+
+        {selectedProject && (
+          <div className="selected-project">
+            <button
+              className="close-button"
+              onClick={() => setSelectedProject(null)}
+            >
+              Close
+            </button>
+            <iframe src={selectedProject} title="Selected Project" />
+          </div>
+        )}
+
         <div className="flex items-center lg:flex-row flex-col-reverse">
           <Swiper
             pagination={{
@@ -43,9 +70,10 @@ const Projects = () => {
                 <img src={content.image} alt="..." />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
+                  <p>{content.description}</p> 
                   <button
                     className="font-bold text-gray self-end"
-                    onClick={() => handleReadMore(content.link)}
+                    onClick={() => handleReadMore(content)}
                   >
                     READ MORE
                   </button>
@@ -54,18 +82,6 @@ const Projects = () => {
             ))}
           </Swiper>
         </div>
-
-        {selectedProject && (
-          <div className="selected-project">
-            <button
-              className="close-button"
-              onClick={() => setSelectedProject(null)}
-            >
-              Close
-            </button>
-            <iframe src={selectedProject} title="Selected Project" />
-          </div>
-        )}
       </div>
     </section>
   );
