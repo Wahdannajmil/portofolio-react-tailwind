@@ -12,14 +12,12 @@ const Projects = () => {
 
   const handleReadMore = (content) => {
     if (content.title === "Jogja Food Hunter") {
-      // Jika proyek adalah "Jogja Food Hunter", tampilkan SweetAlert pengembangan
       Swal.fire({
         title: "Mohon maaf",
         text: "Project ini masih dijalankan di localhost, belum dilakukan deployment",
         icon: "info",
         confirmButtonText: "Lihat kode di github",
       }).then(() => {
-        // Setelah pengguna menekan tombol "OK" di SweetAlert, buka link GitHub
         window.open("https://github.com/Wahdannajmil/Jogja-food-hunter", "_blank");
       });
     } else {
@@ -28,8 +26,8 @@ const Projects = () => {
   };
 
   return (
-    <section className="bg-bg_light_primary" id="projects">
-      <div className="md:container px-5 pt-14 min-h-screen flex flex-col justify-between">
+    <section className="bg-bg_light_primary pb-10" id="projects">
+      <div className="md:container min-h-screen flex flex-col justify-between">
         <div>
           <h2 className="title" data-aos="fade-down">
             {Projects.title}
@@ -60,7 +58,7 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-lg drop-shadow-primary self-start"
+            className="rounded-3xl pb-16 max-w-4xl drop-shadow-primary self-start"
           >
             {Projects.project_content.map((content, i) => (
               <SwiperSlide

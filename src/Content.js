@@ -1,4 +1,4 @@
-import Hero_person from "./assets/images/Hero/person.png";
+// import Hero_person from "./assets/images/Hero/person.png";
 import figma from "./assets/images/Skills/figma.png";
 import html from "./assets/images/Skills/html.png";
 import Bootstrap from "./assets/images/Skills/bootstrap.png";
@@ -46,7 +46,7 @@ export const content = {
     firstName: "Wahdan Najmil",
     LastName: "Fata",
     btnText: "Hire Me",
-    image: Hero_person,
+    // image: Hero_person,
     hero_content: [
       {
         count: "I'm",
@@ -102,9 +102,9 @@ export const content = {
     subtitle: "MY CREATION",
     project_content: [
       {
-        title: "Stunting Information Center",
+        title: "Optima Balita",
         image: project1,
-        link: "https://stunting-center.netlify.app/",
+        link: "https://optima-balita.netlify.app/",
         description: "Website ini merupakan project akhir dari program MSIB di SKILVUL, project ini dibuat dengan React js, menggunakan React context sebagai state management, dan memanfaatkan data dari API "
       },
       {
@@ -132,10 +132,22 @@ export const content = {
         description : "Website ini saya buat secara berkelompok yaitu untuk memenuhi tugas mata kuliah RPLL(Rekayasa perangkat lunak lanjut), di buat menggunakan php native"
       },
       {
-        title: "Stunting center with HTML CSS JS",
+        title: "Netflix Clone",
         image: project7,
-        link: "https://stuntingcenter.netlify.app/index.html",
-        description : "Project ini merupakan tugas dari program MSIB di skilvul, website ini dibuat dengan HTML,CSS,JS"
+        link: "https://netflix-clone-wahdan.netlify.app/",
+        description : "Project Ini saya buat untuk meningkatkan kemampuan koding saya"
+      },
+      {
+        title: "Google Search Clone",
+        image: project7,
+        link: "https://google-clone-wahdan.netlify.app/",
+        description : "Project Ini saya buat untuk meningkatkan kemampuan koding saya"
+      },
+      {
+        title: "Simple E Commerce",
+        image: project7,
+        link: "https://simple-commerce-wahdan.netlify.app/",
+        description : "Project Ini saya buat untuk meningkatkan kemampuan koding saya"
       },
     ],
   },
