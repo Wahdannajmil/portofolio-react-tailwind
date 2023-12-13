@@ -13,6 +13,9 @@ import project3 from "./assets/images/Projects/project3.png";
 import project4 from "./assets/images/Projects/project4.png";
 import project5 from "./assets/images/Projects/project5.png";
 import project7 from "./assets/images/Projects/project7.png";
+import project8 from "./assets/images/Projects/netflix-clone.png"
+import project9 from "./assets/images/Projects/google-search.png"
+import project10 from "./assets/images/Projects/simple-ecom.png"
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
@@ -133,19 +136,19 @@ export const content = {
       },
       {
         title: "Netflix Clone",
-        image: project7,
+        image: project8,
         link: "https://netflix-clone-wahdan.netlify.app/",
         description : "Project Ini saya buat untuk meningkatkan kemampuan koding saya"
       },
       {
         title: "Google Search Clone",
-        image: project7,
+        image: project9,
         link: "https://google-clone-wahdan.netlify.app/",
         description : "Project Ini saya buat untuk meningkatkan kemampuan koding saya"
       },
       {
         title: "Simple E Commerce",
-        image: project7,
+        image: project10,
         link: "https://simple-commerce-wahdan.netlify.app/",
         description : "Project Ini saya buat untuk meningkatkan kemampuan koding saya"
       },
