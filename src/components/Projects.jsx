@@ -27,7 +27,7 @@ const Projects = () => {
 
   return (
     <section className="bg-bg_light_primary pb-10" id="projects">
-      <div className="md:container min-h-screen flex flex-col justify-between">
+      <div className="container mx-auto min-h-screen flex flex-col justify-between">
         <div>
           <h2 className="title" data-aos="fade-down">
             {Projects.title}
@@ -50,7 +50,7 @@ const Projects = () => {
           </div>
         )}
 
-        <div className="flex items-center lg:flex-row flex-col-reverse">
+        <div className="flex flex-col items-center lg:flex-row lg:justify-between">
           <Swiper
             pagination={{
               clickable: true,
@@ -58,14 +58,14 @@ const Projects = () => {
             data-aos="fade-left"
             spaceBetween={20}
             modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-4xl drop-shadow-primary self-start"
+            className="rounded-3xl pb-16 max-w-4xl drop-shadow-primary w-full"
           >
             {Projects.project_content.map((content, i) => (
               <SwiperSlide
                 key={i}
                 className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit"
               >
-                <img src={content.image} alt="..." />
+                <img src={content.image} alt="..." className="w-full" />
                 <div className="flex flex-col gap-1 mt-2">
                   <h5 className="font-bold font-Poppins">{content.title}</h5>
                   <p>{content.description}</p> 

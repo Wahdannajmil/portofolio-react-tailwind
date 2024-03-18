@@ -3,6 +3,7 @@ import figma from "./assets/images/Skills/figma.png";
 import html from "./assets/images/Skills/html.png";
 import Bootstrap from "./assets/images/Skills/bootstrap.png";
 import reactjs from "./assets/images/Skills/react.png";
+import Hero_person from "./assets/images/Hero/person.png"
 import css from "./assets/images/Skills/css.png";
 import js from "./assets/images/Skills/js.png";
 import Tailwind from "./assets/images/Skills/tailwind.png";
@@ -49,7 +50,7 @@ export const content = {
     firstName: "Wahdan Najmil",
     LastName: "Fata",
     btnText: "Hire Me",
-    // image: Hero_person,
+    image: Hero_person,
     hero_content: [
       {
         count: "I'm",
