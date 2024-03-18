@@ -1,7 +1,22 @@
+import { useEffect } from "react";
 import { content } from "../Content";
 
 const Hero = () => {
   const { hero } = content;
+
+  useEffect(() => {
+    const handleLinkedInClick = () => {
+      // Ganti URL LinkedIn dengan URL profil LinkedIn Anda
+      window.open("https://www.linkedin.com/in/wahdan-najmil-fata-949aa825a", "_blank");
+    };
+
+    const linkedinButton = document.getElementById("linkedin-button");
+    linkedinButton.addEventListener("click", handleLinkedInClick);
+
+    return () => {
+      linkedinButton.removeEventListener("click", handleLinkedInClick);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once
 
   return (
     <section id="home" className="overflow-hidden">
@@ -21,7 +36,9 @@ const Hero = () => {
           <h2>{hero.title}</h2>
           <br />
           <div className="flex justify-end">
-            <button className="btn">{hero.btnText}</button>
+            <button id="linkedin-button" className="btn" type="button">
+              {hero.btnText}
+            </button>
           </div>
           <div className="flex flex-col gap-10 mt-10">
             {hero.hero_content.map((content, i) => (
@@ -38,12 +55,13 @@ const Hero = () => {
             ))}
           </div>
         </div>
-        <div className="md:h-[37rem] h-50 sm:h-[20rem]">
+
+        <div className="md:h-[37rem] h-96">
           <img
             src={hero.image}
             data-aos="slide-up"
             alt="..."
-            className="h-full object-cover w-full"
+            className="h-full object-cover"
           />
         </div>
       </div>
