@@ -63,13 +63,13 @@ const Sidebar = () => {
           </a>
         </div>
       </div>
-      <div className="p-auto">
+      {/* <div className="p-auto">
         <div className="flex justify-center p-3 items-center rounded-full bg-slate-800">
           <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden ml-4">
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
-      </div>
+      </div> */}
     </aside>
   );
 };

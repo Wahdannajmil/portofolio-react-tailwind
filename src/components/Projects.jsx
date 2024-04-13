@@ -8,24 +8,34 @@ const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const projectContent = Projects.project_content;
 
-  const handleReadMore = (content) => {
-    if (content.title === "Jogja Food Hunter") {
-      Swal.fire({
-        title: "Mohon maaf",
-        text: "Project ini masih dijalankan di localhost, belum dilakukan deployment",
-        icon: "info",
-        confirmButtonText: "Lihat kode di github",
-      }).then(() => {
-        window.open("https://github.com/Wahdannajmil/Jogja-food-hunter", "_blank");
-      });
-    } else {
-      window.open(content.link, "_blank");
-    }
-  };
+const handleReadMore = (content) => {
+  if (content.title === "Jogja Food Hunter") {
+    Swal.fire({
+      title: "Mohon maaf",
+      text: "Project ini masih dijalankan di localhost, belum dilakukan deployment",
+      icon: "info",
+      confirmButtonText: "Lihat kode di github",
+    }).then(() => {
+      window.open("https://github.com/Wahdannajmil/Jogja-food-hunter", "_blank");
+    });
+  } else {
+    window.open(content.link, "_blank");
+  }
+};
 
-  const handleViewSource = (content) => {
+const handleViewSource = (content) => {
+  if (content.source) {
     window.open(content.source, "_blank");
-  };
+  } else {
+    Swal.fire({
+      title: "Source Not Available",
+      text: "Source code for this project is not available.",
+      icon: "info",
+      confirmButtonText: "Close",
+    });
+  }
+};
+
 
   const goToSlide = (index) => {
     setCurrentSlide(index);

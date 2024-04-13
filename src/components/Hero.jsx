@@ -2,6 +2,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const HeroBanner = () => {
+
+  const handleDownloadCV = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = "/src/assets/images/Hero/WAHDAN NAJMIL FATA_CV.pdf"
+    downloadLink.download = "Wahdan_Najmil_CV.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
+
   return (
     <motion.section
       animate={{ opacity: 1 }}
@@ -29,7 +39,7 @@ const HeroBanner = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.5 }}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-          // Tambahkan properti focus agar terlihat menarik saat diberi fokus
+          onClick={handleDownloadCV} 
         >
           <span className="flex items-center justify-center">
             <span>Download CV</span>
