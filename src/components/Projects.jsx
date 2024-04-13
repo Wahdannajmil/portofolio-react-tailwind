@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { content } from "../Content";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
 import Swal from "sweetalert2";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const Projects = () => {
   const { Projects } = content;
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const projectContent = Projects.project_content;
 
   const handleReadMore = (content) => {
     if (content.title === "Jogja Food Hunter") {
@@ -25,60 +23,61 @@ const Projects = () => {
     }
   };
 
+  const handleViewSource = (content) => {
+    window.open(content.source, "_blank");
+  };
+
+  const goToSlide = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goNext = () => {
+    const nextSlide = currentSlide === projectContent.length - 1 ? 0 : currentSlide + 1;
+    setCurrentSlide(nextSlide);
+  };
+
+  const goPrev = () => {
+    const prevSlide = currentSlide === 0 ? projectContent.length - 1 : currentSlide - 1;
+    setCurrentSlide(prevSlide);
+  };
+
   return (
-    <section className="bg-bg_light_primary pb-10" id="projects">
-      <div className="container mx-auto min-h-screen flex flex-col justify-between">
-        <div>
-          <h2 className="title" data-aos="fade-down">
-            {Projects.title}
-          </h2>
-          <h4 className="subtitle" data-aos="fade-down">
-            {Projects.subtitle}
-          </h4>
-          <br />
-        </div>
-
-        {selectedProject && (
-          <div className="selected-project">
-            <button
-              className="close-button"
-              onClick={() => setSelectedProject(null)}
-            >
-              Close
-            </button>
-            <iframe src={selectedProject} title="Selected Project" />
-          </div>
-        )}
-
-        <div className="flex flex-col items-center lg:flex-row lg:justify-between">
-          <Swiper
-            pagination={{
-              clickable: true,
-            }}
-            data-aos="fade-left"
-            spaceBetween={20}
-            modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-4xl drop-shadow-primary w-full"
-          >
-            {Projects.project_content.map((content, i) => (
-              <SwiperSlide
-                key={i}
-                className="bg-white rounded-3xl p-5 border-b-8 border-[#FAF9FD] h-fit"
-              >
-                <img src={content.image} alt="..." className="w-full" />
-                <div className="flex flex-col gap-1 mt-2">
-                  <h5 className="font-bold font-Poppins">{content.title}</h5>
-                  <p>{content.description}</p> 
+    <section className="bg-[#2d3246] py-8 w-full flex justify-center" id="projects">
+      <div className="container mx-auto">
+        <div className=" mx-auto">
+          <h2 className="pt-10 text-4xl font-Montserrat font-bold text-blue-500 mb-8">{Projects.subtitle}</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {projectContent.map((content, i) => (
+              <div key={i} className={`rounded-lg overflow-hidden bg-white shadow-lg transition duration-300 transform hover:scale-105 justify-self-start`}>
+                <img src={content.image} alt="Project" className="w-full h-48 object-cover" />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold mb-2">{content.title}</h3>
+                  <p className="text-gray-700 mb-4">{content.description}</p>
                   <button
-                    className="font-bold text-gray self-end"
+                    className="text-blue-500 font-semibold hover:text-blue-700 text-underlined mr-2"
                     onClick={() => handleReadMore(content)}
                   >
-                    READ MORE
+                    Visit
+                  </button>
+                  <button
+                    className="text-green-500 font-semibold hover:text-blue-700 pr-4"
+                    onClick={() => handleViewSource(content)}
+                  >
+                    Source
                   </button>
                 </div>
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+          </div>
+          <p className="text-blue-500 font-semibold hover:text-blue-700 text-2xl text-underlined text-center mt-8">Exciting Projects Revealed Soon......</p>
+          <div className="flex justify-center mt-8">
+            <button onClick={goPrev} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-l mr-2">
+              <FaArrowLeft className="inline-block mr-1" /> Prev
+            </button>
+            <button onClick={goNext} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r">
+              Next <FaArrowRight className="inline-block ml-1" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

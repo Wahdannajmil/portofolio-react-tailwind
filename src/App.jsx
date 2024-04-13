@@ -1,10 +1,13 @@
-import Hero from "./components/Hero";
-import Navbar from "./Layouts/Navbar";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Reach from "./components/Reach";
 
 const App = () => {
   useEffect(() => {
@@ -14,17 +17,30 @@ const App = () => {
       disable: "mobile",
     });
   }, []);
+
   return (
-    <div className="">
-      <Navbar />
-      <Hero />
-      <Skills />
-      <Projects />
-      <footer className="p-10 text-center" style={{backgroundColor : "#003566"}}>
-        <h6 className="mb-3 text-white">Wahdan Najmil Fata</h6>
-        <p className="text-white">Frontend Web Developer</p>
-      </footer>
-    </div>
+    <Router>
+      <div className="flex h-screen">
+        <div className="w-1/6 h-screen overflow-y-auto">
+          <Sidebar />
+        </div>
+        <div className="w-full h-screen overflow-y-auto">
+          <div className="flex flex-col justify-between h-full">
+            <div className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Hero />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/reach" element={<Reach />} />
+                <Route path="/projects" element={<Projects />} />
+              </Routes>
+            </div>
+            {/* <div className="w-2/6 h-screen">
+              <Footer />
+            </div> */}
+          </div>
+        </div>
+      </div>
+    </Router>
   );
 };
 

@@ -1,4 +1,3 @@
-// import Hero_person from "./assets/images/Hero/person.png";
 import figma from "./assets/images/Skills/figma.png";
 import html from "./assets/images/Skills/html.png";
 import Bootstrap from "./assets/images/Skills/bootstrap.png";
@@ -32,7 +31,7 @@ export const content = {
       icon: TbSmartHome,
     },
     {
-      link: "#skills",
+      link: "#aboutme",
       icon: BiUser,
     },
     {
@@ -61,49 +60,10 @@ export const content = {
       },
     ],
   },
-  skills: {
-    title: "Skills",
-    subtitle: "MY TOP SKILLS",
-    skills_content: [
-      {
-        name: "Figma",
-        logo: figma,  
-      },
-      {
-        name: "html",
-        logo: html,
-      },
-      {
-        name: "CSS",
-        logo: css,
-      },
-      {
-        name: "js",
-        logo: js,
-      },
-      {
-        name: "Bootstrap",
-        logo: Bootstrap,
-      },
-      {
-        name: "Tailwind",
-        logo: Tailwind,
-      },
-      {
-        name: "React js",
-        logo: reactjs,
-      },
-      {
-        name: "GIT / GITBASH",
-        logo: gitbash,
-      },
-    ],
-    icon: MdArrowForward,
-  },
   
   Projects: {
     title: "Projects",
-    subtitle: "MY CREATION",
+    subtitle: "My Creation",
     project_content: [
       {
         title: "Optima Balita",
