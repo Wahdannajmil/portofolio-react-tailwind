@@ -1,4 +1,5 @@
 import React from 'react';
+
 const Reach = () => {
 
 
@@ -33,7 +34,7 @@ const Reach = () => {
               Education
             </h2>
             <p className="text-xl font-normal text-white">
-        I hold a Bachelor of Information Engineering with Distinction, specializing in Software Systems Development, from Dian Nuswantoro University Semarang.
+              I hold a Bachelor of Information Engineering with Distinction, specializing in Software Systems Development, from Dian Nuswantoro University Semarang.
             </p>
           </div>
         </div>

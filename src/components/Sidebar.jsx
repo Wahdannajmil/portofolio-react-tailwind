@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
-import Logo from "../assets/images/mylogo.png";
+import Logo from "../assets/images/logo.png";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,7 @@ const Sidebar = () => {
       <div>
         <div className="flex justify-between items-center mb-8">
           <NavLink to="/" onClick={() => setIsOpen(false)}>
-            <img src={Logo} alt="Logo" className="h-12" />
+            <img src={Logo} alt="Logo" className="h-16" />
           </NavLink>
         </div>
         <nav className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
@@ -19,7 +19,7 @@ const Sidebar = () => {
             <li>
               <NavLink
                 to="/about"
-                exact // Tambahkan properti exact di sini
+                exact
                 className="text-md font-bold transition duration-300 transform hover:scale-110"
                 activeClassName="bg-blue-800"
                 onClick={() => setIsOpen(false)}

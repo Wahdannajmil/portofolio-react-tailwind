@@ -12,7 +12,7 @@ const Reach = () => {
     setCopiedEmailIndex(index);
     setTimeout(() => {
       setCopiedEmailIndex(null);
-    }, 2000); // Perubahan nilai dari 1500 menjadi 2000 (2 detik)
+    }, 2000); 
   };
 
   const handleAddEmail = () => {
