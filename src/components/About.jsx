@@ -15,6 +15,14 @@ const Reach = () => {
               Hello my name is Wahdan Najmil Fata I am a fresh graduate from Dian Nuswantoro University with expertise in frontend development. My skill set on Frontend Development
             </p>
             <h2 className="pt-10 text-4xl font-Montserrat font-bold text-[#4c8bf5] mb-4">
+              Experiences
+            </h2>
+            <div className="text-xl font-normal text-white">
+              <ul>
+                <li>Frontend Web Development at Skilvul, Jakarta, Indonesia, remote (2023)</li>
+              </ul>
+            </div>
+            <h2 className="pt-10 text-4xl font-Montserrat font-bold text-[#4c8bf5] mb-4">
               Technicalities
             </h2>
             <div className="text-xl font-normal text-white">
@@ -34,7 +42,7 @@ const Reach = () => {
               Education
             </h2>
             <p className="text-xl font-normal text-white">
-              I hold a Bachelor of Information Engineering with Distinction, specializing in Software Systems Development, from Dian Nuswantoro University Semarang.
+              I hold a Bachelor's degree in Information Engineering with cumlaude honors.
             </p>
           </div>
         </div>
@@ -44,3 +52,4 @@ const Reach = () => {
 };
 
 export default Reach;
+ 

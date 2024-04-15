@@ -9,13 +9,27 @@ const Sidebar = () => {
   return (
     <aside className="bg-[#2d3246] text-[#4c8bf5] pl-8 pt-12 pb-12 h-screen flex flex-col justify-between">
       <div>
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-16">
           <NavLink to="/" onClick={() => setIsOpen(false)}>
             <img src={Logo} alt="Logo" className="h-16" />
           </NavLink>
+          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
         </div>
         <nav className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
           <ul className="text-left space-y-8">
+            <li>
+              <NavLink
+                to="/"
+                exact
+                className="text-md font-bold transition duration-300 transform hover:scale-110"
+                activeClassName="bg-blue-800"
+                onClick={() => setIsOpen(false)}
+              >
+                CV
+              </NavLink>
+            </li>
             <li>
               <NavLink
                 to="/about"
@@ -63,13 +77,6 @@ const Sidebar = () => {
           </a>
         </div>
       </div>
-      {/* <div className="p-auto">
-        <div className="flex justify-center p-3 items-center rounded-full bg-slate-800">
-          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden ml-4">
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
-        </div>
-      </div> */}
     </aside>
   );
 };

@@ -1,11 +1,3 @@
-import figma from "./assets/images/Skills/figma.png";
-import html from "./assets/images/Skills/html.png";
-import Bootstrap from "./assets/images/Skills/bootstrap.png";
-import reactjs from "./assets/images/Skills/react.png";
-import css from "./assets/images/Skills/css.png";
-import js from "./assets/images/Skills/js.png";
-import Tailwind from "./assets/images/Skills/tailwind.png";
-import gitbash from "./assets/images/Skills/gitbash.png"
 import project1 from "./assets/images/Projects/project1.png";
 import project2 from "./assets/images/Projects/project2.png";
 import project3 from "./assets/images/Projects/myporto.png";
@@ -15,6 +7,7 @@ import project7 from "./assets/images/Projects/project7.png";
 import project8 from "./assets/images/Projects/netflix-clone.png"
 import project9 from "./assets/images/Projects/google-search.png"
 import project10 from "./assets/images/Projects/simple-ecom.png"
+import mycare from "./assets/images/Projects/mycare.png"
 import { GrMail } from "react-icons/gr";
 import { MdArrowForward, MdCall } from "react-icons/md";
 import { BsInstagram } from "react-icons/bs";
@@ -67,56 +60,74 @@ export const content = {
         title: "Optima Balita",
         image: project1,
         link: "https://www.givxl33t.site/",
-        description: "Website ini merupakan project akhir dari program MSIB di SKILVUL, project ini dibuat dengan React js, menggunakan React context sebagai state management, dan memanfaatkan data dari API",
-        source: "https://www.givxl33t.site/"
+        description: "This website was developed to serve the health of children under five in the Dukuhseti Health Center UPT working area, to facilitate consultations between medical personel and patients.",
+        dev: "Developed with : Reactjs, Context, Tailwindcss, Nodejs, PostgreSQL",
+        source: "https://github.com/Wahdannajmil/Optima-Balita"
       },
       {
-        title: "Todo list App",
-        image: project2,
-        link: "https://todolist-wahdan-skilvul.netlify.app/",
-        description : "Ini merupakan sebuah fitur todolist yaitu dibuat dengan menggunakan React js"
+        title: "My Care App",
+        image: mycare,
+        link: "https://github.com/Wahdannajmil/MyCare-App",
+        description: "I created this website as a requirement for the professional web developer certification exam",
+        dev: "Developed with : Php, MySQL ",
+        source: "https://github.com/Wahdannajmil/MyCare-App"
       },
       {
         title: "My Portofolio Website",
         image: project3,
         link: "https://github.com/Wahdannajmil/portofolio-react-tailwind",
-        description: "Website ini merupakan personal webstite yang saya buat berisi koleksi proyek, hasil karya, atau pengalaman kerja yang dimiliki",
-        source: "asd"
+        description: "This website is a personal website that I created containing a collection of projects, work results, or work experience that I have",
+        dev: "Developed with : Reactjs, Tailwindcss",
+        source: "https://github.com/Wahdannajmil/portofolio-react-tailwind"
       },
       {
         title: "BMI kalkulator",
         image: project4,
         link: "https://bmikalkulator-wahdan.netlify.app/",
-        description: "Fitur yang saya buat untuk memenuhi tugas dari Program MSIB dari skilvul",
-        source: "asd"
+        description: "A feature that I created to fulfill the tasks of the MSIB Program from skilvul",
+        dev: "Developed with : HTML, CSS, JS",
+        source: "https://github.com/Wahdannajmil/BMI-wahdan-skilvul"
+      },
+
+            {
+        title: "Todo list App",
+        image: project2,
+        link: "https://todolist-wahdan-skilvul.netlify.app/",
+        description: "This is a to do list feature which is created as a task from skills in the MSIB program",
+        dev: "Developed with : Reactjs, Tailwindcss, Redux",
+        source: "https://github.com/Wahdannajmil/todolist-react-redux"
       },
       {
         title: "Jogja Food Hunter",
         image: project5,
         link: "https://github.com/Wahdannajmil/Jogja-food-hunter",
-        description: "Website ini saya buat secara berkelompok yaitu untuk memenuhi tugas mata kuliah RPLL(Rekayasa perangkat lunak lanjut), di buat menggunakan php native",
-        source: "asd"
+        description: "I created this website to fulfill an assignment for the RPLL (advanced software engineering) course",
+        dev: "Developed with : Php Native, MySQL",
+        source: "https://github.com/Wahdannajmil/Jogja-food-hunter"
       },
       {
         title: "Netflix Clone",
         image: project8,
         link: "https://netflix-clone-wahdan.netlify.app/",
-        description: "Project Ini saya buat untuk meningkatkan kemampuan koding saya",
-        source: "asd"
+        description: "I created this project to improve my coding skills",
+        dev: "Developed with : Reactjs, Tailwindcss",
+        source: "https://github.com/Wahdannajmil/netflix-clone"
       },
       {
         title: "Google Search Clone",
         image: project9,
         link: "https://google-clone-wahdan.netlify.app/",
-        description: "Project Ini saya buat untuk meningkatkan kemampuan koding saya",
-        source: "asd"
+        description: "I created this project to improve my coding skills",
+        dev: "Developed with : Reactjs, Tailwindcss",
+        source: "https://github.com/Wahdannajmil/google-search-clone"
       },
       {
         title: "Simple E Commerce",
         image: project10,
         link: "https://simple-commerce-wahdan.netlify.app/",
-        description: "Project Ini saya buat untuk meningkatkan kemampuan koding saya",
-        source: "asd"
+        description: "I created this project to improve my coding skills",
+        dev: "Developed with : Reactjs, Tailwindcss",
+        source: "https://github.com/Wahdannajmil/simple-ecommerce"
       },
     ],
   },

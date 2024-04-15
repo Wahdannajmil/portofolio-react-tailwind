@@ -63,6 +63,7 @@ const handleViewSource = (content) => {
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{content.title}</h3>
                   <p className="text-gray-700 mb-4">{content.description}</p>
+                  <p className="text-blue-800 mb-4">{content.dev}</p>
                   <button
                     className="text-blue-500 font-semibold hover:text-blue-700 text-underlined mr-2"
                     onClick={() => handleReadMore(content)}
