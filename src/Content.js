@@ -3,7 +3,6 @@ import project2 from "./assets/images/Projects/project2.png";
 import project3 from "./assets/images/Projects/myporto.png";
 import project4 from "./assets/images/Projects/project4.png";
 import project5 from "./assets/images/Projects/project5.png";
-import project7 from "./assets/images/Projects/project7.png";
 import project8 from "./assets/images/Projects/netflix-clone.png"
 import project9 from "./assets/images/Projects/google-search.png"
 import project10 from "./assets/images/Projects/simple-ecom.png"

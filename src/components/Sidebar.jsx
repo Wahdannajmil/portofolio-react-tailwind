@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { FaLinkedin, FaGithub, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
 import Logo from "../assets/images/logo.png";
-
+import "../App.css"
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activePage, setActivePage] = useState('/');
+  const location = useLocation();
+
+  useEffect(() => {
+    setActivePage(location.pathname);
+  }, [location]);
 
   return (
-    <aside className="bg-[#2d3246] text-[#4c8bf5] pl-8 pt-12 pb-12 h-screen flex flex-col justify-between">
+    <aside className={`bg-[#2d3246] text-[#4c8bf5] pl-8 pt-12 pb-12 h-screen flex flex-col justify-between ${isOpen ? 'shadow-lg' : ''}`}>
       <div>
         <div className="flex justify-between items-center mb-16">
           <NavLink to="/" onClick={() => setIsOpen(false)}>
@@ -18,47 +24,49 @@ const Sidebar = () => {
           </button>
         </div>
         <nav className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
-          <ul className="text-left space-y-8">
+          <ul className="text-left space-y-5">
             <li>
               <NavLink
                 to="/"
                 exact
-                className="text-md font-bold transition duration-300 transform hover:scale-110"
-                activeClassName="bg-blue-800"
+                className={`text-md font-bold transition duration-300 transform hover:scale-110 ${activePage === '/' ? 'active' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 CV
+                {activePage === '/' && <span className="block w-1/2 h-1 bg-white"></span>}
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/about"
                 exact
-                className="text-md font-bold transition duration-300 transform hover:scale-110"
-                activeClassName="bg-blue-800"
+                className={`text-md font-bold transition duration-300 transform hover:scale-110 ${activePage === '/about' ? 'active' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 ABOUT
+                {activePage === '/about' && <span className="block w-1/2 h-1 bg-white"></span>}
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/projects"
-                exact // Tambahkan properti exact di sini
-                className="text-md font-bold transition duration-300 transform hover: scale-100"
+                exact
+                className={`text-md font-bold transition duration-300 transform hover: scale-100 ${activePage === '/projects' ? 'active' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 PROJECTS
+                {activePage === '/projects' && <span className="block w-1/2 h-1 bg-white"></span>}
               </NavLink>
             </li>
             <li>
               <NavLink
                 to="/reach"
-                exact // Tambahkan properti exact di sini
-                className="text-md font-bold transition duration-300 transform hover:scale-110"
+                exact
+                className={`text-md font-bold transition duration-300 transform hover:scale-110 ${activePage === '/reach' ? 'active' : ''}`}
                 onClick={() => setIsOpen(false)}
               >
                 REACH
+                {activePage === '/reach' && <span className="block w-1/2 h-1 bg-white"></span>}
               </NavLink>
             </li>
           </ul>
