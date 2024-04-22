@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import "../App.css"
 
 const HeroBanner = () => {
 
@@ -27,7 +28,7 @@ const HeroBanner = () => {
         <motion.h1
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 0.5, delay: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
           className="text-4xl lg:text-6xl text-[#4c8bf5] font-bold mb-8"
         >
           WAHDAN NAJMIL FATA

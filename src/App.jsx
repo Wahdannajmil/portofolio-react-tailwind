@@ -20,12 +20,12 @@ const App = () => {
 
   return (
     <Router>
-      <div className="flex h-screen">
-        <div className="w-1/6 h-screen overflow-y-auto">
+      <div className="flex flex-col lg:flex-row h-screen">
+        <div className="lg:w-1/6 z-30">
           <Sidebar />
         </div>
-        <div className="w-full h-screen overflow-y-auto">
-          <div className="flex flex-col justify-between h-full">
+        <div className="w-full lg:w-5/5 overflow-y-auto">
+          <div className="flex flex-col h-full">
             <div className="flex-grow">
               <Routes>
                 <Route path="/" element={<Hero />} />
@@ -34,9 +34,7 @@ const App = () => {
                 <Route path="/projects" element={<Projects />} />
               </Routes>
             </div>
-            {/* <div className="w-2/6 h-screen">
-              <Footer />
-            </div> */}
+            {/* <Footer /> */}
           </div>
         </div>
       </div>
@@ -45,3 +43,4 @@ const App = () => {
 };
 
 export default App;
+

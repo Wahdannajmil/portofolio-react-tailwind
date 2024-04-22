@@ -1,8 +1,9 @@
 import React from 'react';
 import "../App.css"
+
 const Reach = () => {
   return (
-    <section className="bg-[#2d3246] py-8 w-full h-full flex justify-center" id="projects">
+    <section className="bg-[#2d3246] py-8 sm:pb-20 w-full h-full flex justify-center" id="projects">
       <div className="container mx-auto">
         <div className="mx-auto">
           <div className="mb-8">
@@ -22,7 +23,7 @@ const Reach = () => {
             </div>
             <h2 className="pt-10 text-4xl font-bold text-[#4c8bf5] mb-4">
               Technicalities
-            </h2>
+            </h2> 
             <div className="text-xl text-white">
               <ul>
                 <li>Languages: Javascript, PHP, Python, Typescript(soon)</li>
@@ -39,7 +40,7 @@ const Reach = () => {
             <h2 className="pt-10 text-4xl font-bold text-[#4c8bf5] mb-4">
               Education
             </h2>
-            <p className="text-xl font-normal text-white">
+            <p className="pb-24 text-xl font-normal text-white">
               I hold a Bachelor's degree in Information Engineering with cum laude honors.
             </p>
           </div>

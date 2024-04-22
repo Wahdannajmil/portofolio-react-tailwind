@@ -22,7 +22,7 @@ const Reach = () => {
   };
 
   return (
-    <section className="bg-[#2d3246] py-8 w-full h-full flex justify-center" id="projects">
+    <section className="bg-[#2d3246] py-8 w-full h-screen flex justify-center" id="projects">
       <div className="container mx-auto">
         <div className="mx-auto">
           <div className="mb-8">

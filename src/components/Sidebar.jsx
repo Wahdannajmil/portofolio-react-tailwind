@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 import Logo from "../assets/images/logo.png";
-import "../App.css"
+import "../App.css";
+
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [activePage, setActivePage] = useState('/');
   const location = useLocation();
 
@@ -13,27 +13,24 @@ const Sidebar = () => {
   }, [location]);
 
   return (
-    <aside className={`bg-[#2d3246] text-[#4c8bf5] pl-8 pt-12 pb-12 h-screen flex flex-col justify-between ${isOpen ? 'shadow-lg' : ''}`}>
+    <aside className="lg:pt-12 lg:pl-8 lg:pb-12 p-1 fixed bottom-0 left-0 w-full lg:w-1/6 lg:h-screen bg-[#2d3246] text-[#4c8bf5]">
       <div>
-        <div className="flex justify-between items-center mb-16">
-          <NavLink to="/" onClick={() => setIsOpen(false)}>
+        <div className="mb-16">
+          <NavLink to="/" className={`block ${window.innerWidth < 640 ? 'hidden' : ''}`} onClick={() => setActivePage('/')}>
             <img src={Logo} alt="Logo" className="h-16" />
           </NavLink>
-          <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden">
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-          </button>
         </div>
-        <nav className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
-          <ul className="text-left space-y-5">
+        <nav>
+          <ul className={`lg:space-y-5 ${window.innerWidth < 640 ? 'flex flex-row justify-between pl-7' : 'flex-col'}`}>
             <li>
               <NavLink
                 to="/"
                 exact
                 className={`text-md font-bold transition duration-300 transform hover:scale-110 ${activePage === '/' ? 'active' : ''}`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setActivePage('/')}
               >
                 CV
-                {activePage === '/' && <span className="block w-1/2 h-1 bg-white"></span>}
+                {activePage === '/' && <span className="block lg:w-1/2 sm:w-1 h-1 bg-[#4c8bf5]"></span>}
               </NavLink>
             </li>
             <li>
@@ -41,10 +38,10 @@ const Sidebar = () => {
                 to="/about"
                 exact
                 className={`text-md font-bold transition duration-300 transform hover:scale-110 ${activePage === '/about' ? 'active' : ''}`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setActivePage('/about')}
               >
                 ABOUT
-                {activePage === '/about' && <span className="block w-1/2 h-1 bg-white"></span>}
+                {activePage === '/about' && <span className="block lg:w-1/2 sm:w-1 h-1 bg-[#4c8bf5]"></span>}
               </NavLink>
             </li>
             <li>
@@ -52,10 +49,10 @@ const Sidebar = () => {
                 to="/projects"
                 exact
                 className={`text-md font-bold transition duration-300 transform hover: scale-100 ${activePage === '/projects' ? 'active' : ''}`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setActivePage('/projects')}
               >
                 PROJECTS
-                {activePage === '/projects' && <span className="block w-1/2 h-1 bg-white"></span>}
+                {activePage === '/projects' && <span className="block lg:w-1/2 sm:w-1 h-1 bg-[#4c8bf5]"></span>}
               </NavLink>
             </li>
             <li>
@@ -63,28 +60,30 @@ const Sidebar = () => {
                 to="/reach"
                 exact
                 className={`text-md font-bold transition duration-300 transform hover:scale-110 ${activePage === '/reach' ? 'active' : ''}`}
-                onClick={() => setIsOpen(false)}
+                onClick={() => setActivePage('/reach')}
               >
                 REACH
-                {activePage === '/reach' && <span className="block w-1/2 h-1 bg-white"></span>}
+                {activePage === '/reach' && <span className="block lg:w-1/2 sm:w-1 h-1 bg-[#4c8bf5]"></span>}
               </NavLink>
+            </li>
+            <li>
+            <div className="space-x-4 pt-20">
+              <a href="https://www.linkedin.com/in/wahdan-najmil-fata-949aa825a" target="_blank" rel="noopener noreferrer" className={`text-[#4c8bf5] ${window.innerWidth < 640 ? 'hidden' : ''}`}>
+                <FaLinkedin size={32} className="transition duration-300 transform hover:scale-110" />
+              </a>
+              <a href="https://github.com/Wahdannajmil" target="_blank" rel="noopener noreferrer" className={`text-[#4c8bf5] ${window.innerWidth < 640 ? 'hidden' : ''}`}>
+                <FaGithub size={32} className="transition duration-300 transform hover:scale-110" />
+              </a>
+              <a href="https://www.instagram.com/your_username/" target="_blank" rel="noopener noreferrer" className={`text-[#4c8bf5] ${window.innerWidth < 640 ? 'hidden' : ''}`}>
+                <FaInstagram size={32} className="transition duration-300 transform hover:scale-110" />
+              </a>
+            </div>
             </li>
           </ul>
         </nav>
       </div>
-      <div className="text-center">
-        <div className="flex flex-col text-center space-y-8">
-          <a href="https://www.linkedin.com/in/wahdan-najmil-fata-949aa825a" target="_blank" rel="noopener noreferrer" className="text-[#4c8bf5]">
-            <FaLinkedin size={32} className="transition duration-300 transform hover:scale-110" />
-          </a>
-          <a href="https://github.com/Wahdannajmil" target="_blank" rel="noopener noreferrer" className="text-[#4c8bf5] mt-2">
-            <FaGithub size={32} className="transition duration-300 transform hover:scale-110" />
-          </a>
-          <a href="https://www.instagram.com/your_username/" target="_blank" rel="noopener noreferrer" className="text-[#4c8bf5] mt-2">
-            <FaInstagram size={32} className="transition duration-300 transform hover:scale-110" />
-          </a>
-        </div>
-      </div>
+      {/* Border atas untuk tampilan mobile */}
+      <div className="lg:hidden border-t-2 border-[#4c8bf5]"></div>
     </aside>
   );
 };
