@@ -5,12 +5,9 @@ import "../App.css"
 const HeroBanner = () => {
 
   const handleDownloadCV = () => {
-    const downloadLink = document.createElement("a");
-    downloadLink.href = "/src/assets/images/Hero/WAHDAN NAJMIL FATA_CV.pdf"; // Ubah path sesuai dengan nama file yang benar
-    downloadLink.download = "WAHDAN NAJMIL FATA_CV.pdf";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
+    // Ganti link di bawah dengan link Google Drive CV Anda
+    const downloadLink = "https://drive.google.com/file/d/11YbS29Ovl9ZdcFXx4nU5uBrbbpcn8Ddr/view?usp=drive_link"; 
+    window.open(downloadLink, "_blank");
   };
 
   return (
