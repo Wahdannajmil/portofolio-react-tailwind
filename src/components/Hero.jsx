@@ -6,8 +6,8 @@ const HeroBanner = () => {
 
   const handleDownloadCV = () => {
     const downloadLink = document.createElement("a");
-    downloadLink.href = "/src/assets/images/Hero/WAHDAN NAJMIL FATA_CV.pdf"
-    downloadLink.download = "Wahdan_Najmil_CV.pdf";
+    downloadLink.href = "/src/assets/images/Hero/WAHDAN NAJMIL FATA_CV.pdf"; // Ubah path sesuai dengan nama file yang benar
+    downloadLink.download = "WAHDAN NAJMIL FATA_CV.pdf";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
