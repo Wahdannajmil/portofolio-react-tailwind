@@ -5,8 +5,7 @@ import "../App.css"
 const HeroBanner = () => {
 
   const handleDownloadCV = () => {
-    // Ganti link di bawah dengan link Google Drive CV Anda
-    const downloadLink = "https://drive.google.com/file/d/11YbS29Ovl9ZdcFXx4nU5uBrbbpcn8Ddr/view?usp=drive_link"; 
+    const downloadLink = "https://drive.google.com/file/d/1pVAkSf-mZsaTLzLpeTI8TS95ae_vCgod/view?usp=sharing"; 
     window.open(downloadLink, "_blank");
   };
 
