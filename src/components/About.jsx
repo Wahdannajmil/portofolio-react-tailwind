@@ -11,7 +11,7 @@ const Reach = () => {
               About Me
             </h2>
             <p className="text-xl font-normal text-white">
-              Hello, my name is Wahdan Najmil Fata. I'm a recent graduate from Dian Nuswantoro University with expertise in frontend development.
+              Hello, my name is Wahdan Najmil Fata. I'm a recent graduate from Dian Nuswantoro University with expertise in Web Development.
             </p>
             <h2 className="pt-10 text-4xl font-bold text-[#4c8bf5] mb-4">
               Experiences
@@ -26,8 +26,8 @@ const Reach = () => {
             </h2> 
             <div className="text-xl text-white">
               <ul>
-                <li>Languages: Javascript, PHP, Python, Typescript(soon)</li>
-                <li>Framework: Reactjs, Bootstrap, Tailwind, NextJS(soon)</li>
+                <li>Languages: Javascript, PHP, Python, Java Typescript(soon)</li>
+                <li>Framework: Reactjs, Bootstrap, Tailwind, Codeigniter, Laravel, NextJS(soon)</li>
                 <li>Extension skills: Communication, Problem solving, Functional Programming, Collaboration</li>
               </ul>
             </div>

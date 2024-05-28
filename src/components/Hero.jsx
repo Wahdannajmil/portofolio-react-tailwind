@@ -5,7 +5,7 @@ import "../App.css"
 const HeroBanner = () => {
 
   const handleDownloadCV = () => {
-    const downloadLink = "https://drive.google.com/file/d/1pVAkSf-mZsaTLzLpeTI8TS95ae_vCgod/view?usp=sharing"; 
+    const downloadLink = "https://drive.google.com/file/d/1GV34VMQOmp2G-cegXG95mAyQxQ85d4E_/view?usp=sharing"; 
     window.open(downloadLink, "_blank");
   };
 
